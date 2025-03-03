@@ -1,1 +1,2 @@
-This is an example of the Git
+This is an example of the Git hub
+This is the second exmaple
