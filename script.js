@@ -3,4 +3,5 @@ jQuery(document).ready(function ($) {
     $('.download-trigger').on('click', function (e) {
         e.preventDefault();
     }
+    
     });
