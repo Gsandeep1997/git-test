@@ -1,0 +1,83 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set up the container and body */
+  body {
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align from top */
+    overflow: hidden;
+    color: #0f0; /* Matrix green text */
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  /* Container for cloud and rain */
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  /* Cloud Shape with Background Image */
+  .cloud {
+    width: 300px;
+    height: 150px;
+    background-image: url('https://www.pngitem.com/pimgs/m/ihimJoh_cloud-computing-clipart-transparent-png-transparent-cloud-computing.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  /* Text within the cloud */
+  h2 {
+    color: #0f0;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  /* The matrix rain effect container */
+  .matrix-rain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* To allow interaction with background */
+    z-index: 0;
+    background: rgba(0, 255, 0, 0.1); /* Brightness effect around the cloud */
+    box-shadow: inset 0 0 60px rgba(0, 255, 0, 0.4); /* Glow effect around the cloud */
+  }
+  
+  /* Matrix rain (letters falling) */
+  .matrix-rain span {
+    position: absolute;
+    font-size: 20px;
+    color: #0f0;
+    animation: fall linear infinite;
+    user-select: none;
+    opacity: 0.8;
+  }
+  
+  @keyframes fall {
+    to {
+      transform: translateY(100vh); /* Fall to the bottom of the screen */
+    }
+  }
+  
